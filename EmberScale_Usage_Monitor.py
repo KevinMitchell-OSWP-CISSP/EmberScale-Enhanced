@@ -121,12 +121,13 @@ def generate_usage_summary():
         total_tokens = prefs.getProperty("EMBERSCALE_TOTAL_TOKENS", "0")
         last_analysis = prefs.getProperty("EMBERSCALE_LAST_ANALYSIS", "Never")
         
+        status = 'Active' if total_analyses != '0' else 'No usage recorded'
         summary = f"""
 === Usage Summary ===
 Total Analyses: {total_analyses}
 Total Tokens Used: {total_tokens}
 Last Analysis: {last_analysis}
-Status: {'Active' if total_analyses != '0' else 'No usage recorded'}
+Status: {status}
         """
         return summary.strip()
     except Exception as e:
@@ -144,11 +145,13 @@ def generate_cost_summary():
         # Using approximate rates: $0.003 per 1K input tokens, $0.015 per 1K output tokens
         estimated_cost = (total_tokens * 0.000015)  # Rough estimate
         
+        total_analyses = int(prefs.getProperty("EMBERSCALE_TOTAL_ANALYSES", "1"))
+        cost_per_analysis = estimated_cost / max(1, total_analyses)
         cost_summary = f"""
 === Cost Analysis ===
 Total Tokens: {total_tokens:,}
 Estimated Cost: ${estimated_cost:.4f}
-Cost per Analysis: ${estimated_cost / max(1, int(prefs.getProperty("EMBERSCALE_TOTAL_ANALYSES", "1"))):.4f}
+Cost per Analysis: ${cost_per_analysis:.4f}
         """
         return cost_summary.strip()
     except Exception as e:
@@ -163,11 +166,15 @@ def get_api_key_info():
         regular_key = prefs.getProperty("ANTHROPIC_API_KEY")
         admin_key = prefs.getProperty("ANTHROPIC_ADMIN_API_KEY")
         
+        regular_status = 'Configured' if regular_key else 'Not configured'
+        admin_status = 'Configured' if admin_key else 'Not configured'
+        monitoring_status = 'Enabled' if admin_key else 'Disabled'
+        
         key_info = f"""
 === API Key Information ===
-Regular API Key: {'Configured' if regular_key else 'Not configured'}
-Admin API Key: {'Configured' if admin_key else 'Not configured'}
-Usage Monitoring: {'Enabled' if admin_key else 'Disabled'}
+Regular API Key: {regular_status}
+Admin API Key: {admin_status}
+Usage Monitoring: {monitoring_status}
         """
         return key_info.strip()
     except Exception as e:
