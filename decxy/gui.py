@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # gui.py
 
 from decyx.dialogs.suggestion_dialog import show_suggestion_dialog

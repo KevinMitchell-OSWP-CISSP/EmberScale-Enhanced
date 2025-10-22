@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # api.py
 #
 # Note: Decyx doesn't use Anthropic's official python API as it is intended for Python 3+
