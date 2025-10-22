@@ -17,6 +17,7 @@ import os
 import json
 from ghidra.framework.preferences import Preferences
 from ghidra.util.task import ConsoleTaskMonitor
+from decxy.admin_api import track_usage_for_operation
 
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
@@ -732,6 +733,13 @@ def main():
     intro = build_intro(q, funcs, strs, examples_text)
 
     print("Starting tool-enabled session...")
+    
+    # Track usage for analytics
+    try:
+        track_usage_for_operation("RE_Toolbox_Analysis")
+    except Exception:
+        pass  # Don't fail if tracking fails
+    
     run_tool_session(api_key, model, intro)
 
 if __name__ == "__main__":

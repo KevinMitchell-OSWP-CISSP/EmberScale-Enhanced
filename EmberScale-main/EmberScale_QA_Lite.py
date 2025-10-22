@@ -7,6 +7,7 @@ from ghidra.framework.preferences import Preferences
 from ghidra.util.task import ConsoleTaskMonitor
 from ghidra.program.model.listing import CodeUnit
 from decxy.api import get_response_from_claude
+from decxy.admin_api import track_usage_for_operation
 
 # Optional model list if present
 try:
@@ -155,6 +156,12 @@ def main():
     response = get_response_from_claude(prompt, api_key, model, monitor, is_explanation=True)
 
     if response:
+        # Track usage for analytics
+        try:
+            track_usage_for_operation("QA_Lite_Query")
+        except Exception:
+            pass  # Don't fail if tracking fails
+        
         print("\n=== Claude's Response ===\n")
         try:
             # Ensure we always print a unicode-safe string in Jython
