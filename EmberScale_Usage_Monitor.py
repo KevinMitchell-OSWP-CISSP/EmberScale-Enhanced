@@ -122,13 +122,13 @@ def generate_usage_summary():
         last_analysis = prefs.getProperty("EMBERSCALE_LAST_ANALYSIS", "Never")
         
         status = 'Active' if total_analyses != '0' else 'No usage recorded'
-        summary = f"""
+        summary = """
 === Usage Summary ===
-Total Analyses: {total_analyses}
-Total Tokens Used: {total_tokens}
-Last Analysis: {last_analysis}
-Status: {status}
-        """
+Total Analyses: {}
+Total Tokens Used: {}
+Last Analysis: {}
+Status: {}
+        """.format(total_analyses, total_tokens, last_analysis, status)
         return summary.strip()
     except Exception as e:
         return f"Error generating usage summary: {str(e)}"
@@ -147,12 +147,12 @@ def generate_cost_summary():
         
         total_analyses = int(prefs.getProperty("EMBERSCALE_TOTAL_ANALYSES", "1"))
         cost_per_analysis = estimated_cost / max(1, total_analyses)
-        cost_summary = f"""
+        cost_summary = """
 === Cost Analysis ===
-Total Tokens: {total_tokens:,}
-Estimated Cost: ${estimated_cost:.4f}
-Cost per Analysis: ${cost_per_analysis:.4f}
-        """
+Total Tokens: {:,}
+Estimated Cost: ${:.4f}
+Cost per Analysis: ${:.4f}
+        """.format(total_tokens, estimated_cost, cost_per_analysis)
         return cost_summary.strip()
     except Exception as e:
         return f"Error generating cost summary: {str(e)}"
@@ -170,12 +170,12 @@ def get_api_key_info():
         admin_status = 'Configured' if admin_key else 'Not configured'
         monitoring_status = 'Enabled' if admin_key else 'Disabled'
         
-        key_info = f"""
+        key_info = """
 === API Key Information ===
-Regular API Key: {regular_status}
-Admin API Key: {admin_status}
-Usage Monitoring: {monitoring_status}
-        """
+Regular API Key: {}
+Admin API Key: {}
+Usage Monitoring: {}
+        """.format(regular_status, admin_status, monitoring_status)
         return key_info.strip()
     except Exception as e:
         return f"Error getting API key info: {str(e)}"
