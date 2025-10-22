@@ -80,6 +80,34 @@ def setup_enhanced_api_keys():
             print("WARNING: Admin API key not provided - usage monitoring disabled")
 
 # -------------------------
+# Usage Monitoring Dashboard
+# -------------------------
+def show_usage_dashboard():
+    """
+    Display the full usage monitoring dashboard.
+    """
+    print("=== EmberScale Usage Dashboard ===")
+    print()
+    
+    # Show usage summary
+    summary = generate_usage_summary()
+    print(summary)
+    print()
+    
+    # Show cost analysis
+    cost_summary = generate_cost_summary()
+    print(cost_summary)
+    print()
+    
+    # Show API key information
+    key_info = get_api_key_info()
+    print(key_info)
+    print()
+    
+    # Show integration status
+    show_integration_status()
+
+# -------------------------
 # Usage Monitoring Menu
 # -------------------------
 def show_usage_menu():
