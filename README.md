@@ -11,7 +11,7 @@ EmberScale is a comprehensive reverse engineering tool that integrates advanced 
 
 **Repository**: [https://github.com/KevinMitchell-OSWP-CISSP/EmberScale-Enhanced](https://github.com/KevinMitchell-OSWP-CISSP/EmberScale-Enhanced)
 
-## 🚀 Key Features
+## Key Features
 
 ### Core Capabilities
 - **AI-Powered Analysis**: Advanced binary analysis using Claude AI models
@@ -34,7 +34,7 @@ EmberScale is a comprehensive reverse engineering tool that integrates advanced 
 - **Executive Presentations**: High-level summaries (PowerPoint)
 - **Specialized Reports**: IOC reports, vulnerability assessments, remediation guides
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 EmberScale-Enhanced/
@@ -91,7 +91,7 @@ EmberScale-Enhanced/
    - Run `EmberScale_Ghidra.py` from the Script Manager
    - Verify the API key is configured correctly
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Analysis
 1. **Load a Binary**: Open your target binary in Ghidra
@@ -176,7 +176,7 @@ def perform_vulnerability_assessment():
     response = call_claude_with_skills(prompt, skills)
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### API Key Management
 - **Automatic Storage**: API keys are automatically stored in Ghidra Preferences
@@ -196,7 +196,7 @@ def perform_vulnerability_assessment():
 - **Budget Alerts**: Set up cost alerts and usage limits
 - **Report Generation**: Generate detailed usage reports
 
-## 📈 Advanced Features
+## Advanced Features
 
 ### Agent Skills Integration
 - **Pre-built Skills**: Access to Anthropic's pre-built Skills (Excel, PowerPoint, Word, PDF)
@@ -216,7 +216,7 @@ def perform_vulnerability_assessment():
 - **Performance Metrics**: Track analysis performance and efficiency
 - **Custom Reports**: Generate custom usage and cost reports
 
-## 🛡️ Security & Privacy
+## Security & Privacy
 
 ### Data Protection
 - **Local Processing**: Analysis data remains on your local system
@@ -230,7 +230,7 @@ def perform_vulnerability_assessment():
 - **Audit Logging**: Comprehensive logging of all analysis activities
 - **Permission Management**: Fine-grained control over analysis capabilities
 
-## 📚 Documentation
+## Documentation
 
 ### Core Documentation
 - **README.md**: This comprehensive overview
@@ -248,7 +248,7 @@ def perform_vulnerability_assessment():
 - **Ghidra API**: Deep integration with Ghidra's scripting API
 - **Agent Skills API**: Integration with Anthropic's Agent Skills API
 
-## 🤝 Contributing
+## Contributing
 
 ### Development Setup
 1. **Fork the Repository**: Create your own fork of the project
@@ -274,13 +274,13 @@ def perform_vulnerability_assessment():
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Ghidra Team**: For the excellent reverse engineering framework
 - **Anthropic**: For the powerful Claude AI models and Agent Skills API
 - **Community**: For feedback, contributions, and support
 
-## 📞 Support
+## Support
 
 ### Getting Help
 - **Documentation**: Check the comprehensive documentation
