@@ -131,7 +131,7 @@ Status: {}
         """.format(total_analyses, total_tokens, last_analysis, status)
         return summary.strip()
     except Exception as e:
-        return f"Error generating usage summary: {str(e)}"
+        return "Error generating usage summary: {}".format(str(e))
 
 def generate_cost_summary():
     """
@@ -155,7 +155,7 @@ Cost per Analysis: ${:.4f}
         """.format(total_tokens, estimated_cost, cost_per_analysis)
         return cost_summary.strip()
     except Exception as e:
-        return f"Error generating cost summary: {str(e)}"
+        return "Error generating cost summary: {}".format(str(e))
 
 def get_api_key_info():
     """
@@ -178,7 +178,7 @@ Usage Monitoring: {}
         """.format(regular_status, admin_status, monitoring_status)
         return key_info.strip()
     except Exception as e:
-        return f"Error getting API key info: {str(e)}"
+        return "Error getting API key info: {}".format(str(e))
 
 def get_usage_report():
     """

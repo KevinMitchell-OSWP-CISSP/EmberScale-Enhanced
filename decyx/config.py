@@ -1,7 +1,8 @@
 # config.py - Enhanced configuration management for EmberScale
 
 import os
-from typing import List, Dict, Any
+# Note: typing module not available in Jython, using comments for type hints
+# from typing import List, Dict, Any
 
 # API Configuration
 CLAUDE_API_URL = "https://api.anthropic.com/v1/messages"
