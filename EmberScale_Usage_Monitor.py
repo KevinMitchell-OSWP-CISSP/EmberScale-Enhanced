@@ -108,6 +108,88 @@ def show_usage_dashboard():
     show_integration_status()
 
 # -------------------------
+# Usage Analysis Functions
+# -------------------------
+def generate_usage_summary():
+    """
+    Generate a comprehensive usage summary.
+    """
+    try:
+        # Get usage data from preferences
+        prefs = Preferences
+        total_analyses = prefs.getProperty("EMBERSCALE_TOTAL_ANALYSES", "0")
+        total_tokens = prefs.getProperty("EMBERSCALE_TOTAL_TOKENS", "0")
+        last_analysis = prefs.getProperty("EMBERSCALE_LAST_ANALYSIS", "Never")
+        
+        summary = f"""
+=== Usage Summary ===
+Total Analyses: {total_analyses}
+Total Tokens Used: {total_tokens}
+Last Analysis: {last_analysis}
+Status: {'Active' if total_analyses != '0' else 'No usage recorded'}
+        """
+        return summary.strip()
+    except Exception as e:
+        return f"Error generating usage summary: {str(e)}"
+
+def generate_cost_summary():
+    """
+    Generate a cost analysis summary.
+    """
+    try:
+        prefs = Preferences
+        total_tokens = int(prefs.getProperty("EMBERSCALE_TOTAL_TOKENS", "0"))
+        
+        # Rough cost calculation (Claude pricing varies by model)
+        # Using approximate rates: $0.003 per 1K input tokens, $0.015 per 1K output tokens
+        estimated_cost = (total_tokens * 0.000015)  # Rough estimate
+        
+        cost_summary = f"""
+=== Cost Analysis ===
+Total Tokens: {total_tokens:,}
+Estimated Cost: ${estimated_cost:.4f}
+Cost per Analysis: ${estimated_cost / max(1, int(prefs.getProperty("EMBERSCALE_TOTAL_ANALYSES", "1"))):.4f}
+        """
+        return cost_summary.strip()
+    except Exception as e:
+        return f"Error generating cost summary: {str(e)}"
+
+def get_api_key_info():
+    """
+    Get information about configured API keys.
+    """
+    try:
+        prefs = Preferences
+        regular_key = prefs.getProperty("ANTHROPIC_API_KEY")
+        admin_key = prefs.getProperty("ANTHROPIC_ADMIN_API_KEY")
+        
+        key_info = f"""
+=== API Key Information ===
+Regular API Key: {'Configured' if regular_key else 'Not configured'}
+Admin API Key: {'Configured' if admin_key else 'Not configured'}
+Usage Monitoring: {'Enabled' if admin_key else 'Disabled'}
+        """
+        return key_info.strip()
+    except Exception as e:
+        return f"Error getting API key info: {str(e)}"
+
+def get_usage_report():
+    """
+    Get detailed usage report data.
+    """
+    try:
+        # This would typically fetch from Anthropic's API
+        # For now, return local data
+        prefs = Preferences
+        return {
+            "total_analyses": prefs.getProperty("EMBERSCALE_TOTAL_ANALYSES", "0"),
+            "total_tokens": prefs.getProperty("EMBERSCALE_TOTAL_TOKENS", "0"),
+            "last_analysis": prefs.getProperty("EMBERSCALE_LAST_ANALYSIS", "Never")
+        }
+    except Exception as e:
+        return None
+
+# -------------------------
 # Usage Monitoring Menu
 # -------------------------
 def show_usage_menu():
