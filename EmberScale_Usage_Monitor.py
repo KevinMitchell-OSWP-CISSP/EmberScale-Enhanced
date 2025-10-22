@@ -196,6 +196,48 @@ def get_usage_report():
     except Exception as e:
         return None
 
+def get_claude_code_usage():
+    """
+    Get Claude Code usage statistics.
+    """
+    try:
+        prefs = Preferences
+        # Get Claude Code specific usage data
+        code_analyses = prefs.getProperty("EMBERSCALE_CODE_ANALYSES", "0")
+        code_tokens = prefs.getProperty("EMBERSCALE_CODE_TOKENS", "0")
+        last_code_analysis = prefs.getProperty("EMBERSCALE_LAST_CODE_ANALYSIS", "Never")
+        
+        return {
+            "code_analyses": code_analyses,
+            "code_tokens": code_tokens,
+            "last_code_analysis": last_code_analysis,
+            "status": "Active" if code_analyses != "0" else "No Claude Code usage recorded"
+        }
+    except Exception as e:
+        return None
+
+def get_cost_report():
+    """
+    Get detailed cost report data.
+    """
+    try:
+        prefs = Preferences
+        total_tokens = int(prefs.getProperty("EMBERSCALE_TOTAL_TOKENS", "0"))
+        total_analyses = int(prefs.getProperty("EMBERSCALE_TOTAL_ANALYSES", "0"))
+        
+        # Calculate costs
+        estimated_cost = total_tokens * 0.000015
+        cost_per_analysis = estimated_cost / max(1, total_analyses)
+        
+        return {
+            "total_tokens": total_tokens,
+            "total_analyses": total_analyses,
+            "estimated_cost": estimated_cost,
+            "cost_per_analysis": cost_per_analysis
+        }
+    except Exception as e:
+        return None
+
 # -------------------------
 # Usage Monitoring Menu
 # -------------------------
