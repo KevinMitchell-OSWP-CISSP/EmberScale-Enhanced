@@ -110,7 +110,6 @@ EmberScale-Enhanced/
    ```
 
 2. **Configure Ghidra**
-   - Copy the `decyx` folder to your Ghidra scripts directory
    - Copy the main EmberScale scripts to your Ghidra scripts directory
    - Ensure Jython is properly configured in Ghidra
 
