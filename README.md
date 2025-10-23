@@ -17,7 +17,7 @@ EmberScale is a comprehensive reverse engineering tool that integrates advanced 
 
 ### Core Capabilities (Production-Ready)
 - **AI-Powered Analysis**: Advanced binary analysis using Claude AI models
-- **Agent Skills Integration**: Specialized reverse engineering workflows with document generation
+- **Advanced Analysis**: Specialized reverse engineering workflows with comprehensive analysis
 - **Enhanced Ghidra Integration**: Deep integration with Ghidra's scripting API
 - **Usage Monitoring**: Comprehensive cost tracking and usage analytics
 - **Token Tracking**: Built-in usage tracking across all tools
@@ -45,7 +45,6 @@ EmberScale-Enhanced/
 ├── EmberScale_QA_Lite.py             # Quick analysis tool  
 ├── EmberScale-RE_Toolbox.py          # Comprehensive analysis toolbox
 ├── EmberScale_Enhanced.py            # Enhanced version (production-ready)
-├── EmberScale_Agent_Skills.py        # Agent Skills integration
 ├── EmberScale_Usage_Monitor.py       # Usage monitoring dashboard
 ├── EmberScale_Single_Decompile.py    # Single function decompilation
 ├── decyx/                            # Core API modules
@@ -57,7 +56,6 @@ EmberScale-Enhanced/
 │   └── utils.py                      # Utility functions
 ├── examples/                         # Usage examples and tutorials
 │   ├── quick_start.py                # Quick start guide
-│   ├── agent_skills_example.py       # Agent Skills examples
 │   └── custom_re_skill/              # Custom skill examples
 ├── assets/                           # Media and documentation
 ├── INSTALLATION.md                   # Detailed installation guide
@@ -66,7 +64,6 @@ EmberScale-Enhanced/
 ├── LICENSE                           # MIT License
 ├── requirements.txt                  # Python dependencies
 └── README.md                         # This file
-├── AGENT_SKILLS_README.md           # Agent Skills documentation
 └── ENHANCEMENT_SUMMARY.md           # Enhancement summary
 ```
 
