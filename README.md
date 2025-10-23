@@ -15,6 +15,8 @@
 
 EmberScale is a comprehensive reverse engineering tool that integrates advanced AI capabilities with Ghidra for enhanced binary analysis, vulnerability assessment, and security research. The tool leverages Anthropic's Claude AI models and the latest Agent Skills API to provide specialized analysis workflows, automated document generation, and intelligent reverse engineering assistance.
 
+**Built on the Foundation of [Decyx](https://github.com/philsajdak/decyx)**: EmberScale is an enhanced and expanded version of the original Decyx project by [philsajdak](https://github.com/philsajdak). We extend our deepest gratitude to the original Decyx team for creating the foundational AI-powered Ghidra extension that inspired this project. The core concepts, API integration patterns, and user experience principles from Decyx have been instrumental in developing EmberScale's advanced capabilities.
+
 **Repository**: [https://github.com/KevinMitchell-OSWP-CISSP/EmberScale-Enhanced](https://github.com/KevinMitchell-OSWP-CISSP/EmberScale-Enhanced)
 
 ## Key Features
@@ -307,6 +309,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Acknowledgments
 
+- **[Decyx Project](https://github.com/philsajdak/decyx)**: The original AI-powered Ghidra extension by [philsajdak](https://github.com/philsajdak) that served as the foundation for EmberScale. Their innovative work in integrating Claude AI with Ghidra's API provided the core architecture and inspiration for this enhanced version.
 - **Ghidra Team**: For the excellent reverse engineering framework
 - **Anthropic**: For the powerful Claude AI models and Agent Skills API
 - **Community**: For feedback, contributions, and support
