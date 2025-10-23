@@ -131,7 +131,7 @@ def print_usage_banner():
         "At 0x000B1E6C, show 8 instructions before and 16 after, and tell me if this is part of a bounds check.",
         "Give me the full signature + locals for process_grid_pattern_copy, and explain the role of each parameter.",
     ]
-    print("\n=== EmberScale RE Toolbox — example prompts ===")
+    print("\n=== EmberScale RE Toolbox - example prompts ===")
     for ex in examples:
         print(" - " + ex)
     print("==============================================\n")
@@ -510,7 +510,7 @@ def run_tool_session(api_key, model, intro_text, out_path=None, max_turns=14):
 
         tool_calls = [b for b in blocks if b.get("type")=="tool_use"]
         if not tool_calls:
-            # No tools requested → done
+            # No tools requested - done
             break
 
         # Echo assistant turn and execute tools
@@ -546,7 +546,7 @@ def run_tool_session(api_key, model, intro_text, out_path=None, max_turns=14):
         try:
             with open(out_path, "w") as f:
                 ts = time.strftime("%Y-%m-%d %H:%M:%S")
-                f.write("# EmberScale RE Toolbox – session {}\n\n".format(ts))
+                f.write("# EmberScale RE Toolbox - session {}\n\n".format(ts))
                 for role, text in transcript:
                     if text:
                         f.write("## {}\n\n{}\n\n".format(role.title(), text))
