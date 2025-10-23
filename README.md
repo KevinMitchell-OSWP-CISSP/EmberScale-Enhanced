@@ -1,5 +1,9 @@
 # EmberScale - Advanced AI-Powered Reverse Engineering Tool
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/KevinMitchell-OSWP-CISSP/EmberScale-Enhanced/master/assets/logo.png" alt="EmberScale AI Logo" width="200" height="200">
+</div>
+
 [![GitHub](https://img.shields.io/badge/GitHub-EmberScale--Enhanced-blue?style=flat-square&logo=github)](https://github.com/KevinMitchell-OSWP-CISSP/EmberScale-Enhanced)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)](https://python.org)
