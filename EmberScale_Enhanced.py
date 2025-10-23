@@ -28,15 +28,6 @@ def track_usage_for_operation(operation_name, tokens_used=None):
     """Stub function for usage tracking - functionality not implemented yet."""
     print("Usage tracking: {} (tokens: {})".format(operation_name, tokens_used or 0))
 
-def show_usage_dashboard_stub():
-    """Stub function for usage dashboard - functionality not implemented yet."""
-    print("Usage Dashboard - Feature not yet implemented")
-    print("This would show usage analytics and monitoring data")
-
-def show_usage_menu_stub():
-    """Stub function for usage menu - functionality not implemented yet."""
-    print("Usage Analytics Menu - Feature not yet implemented")
-    print("This would show usage monitoring options and analytics")
 
 # -------------------------
 # Enhanced UI and Interaction
@@ -47,13 +38,9 @@ def show_enhanced_menu():
     """
     choices = [
         "Advanced Binary Analysis",
-        "Interactive Usage Dashboard", 
         "Smart Function Analysis",
         "Cross-Reference Explorer",
-        "Intelligent Code Comments",
-        "Visual Analysis Results",
         "Enhanced Settings",
-        "Usage Analytics",
         "Help & Documentation"
     ]
     
@@ -525,21 +512,12 @@ def main():
         
         if "Advanced Binary Analysis" in choice:
             perform_smart_analysis()
-        elif "Interactive Usage Dashboard" in choice:
-            show_usage_dashboard_stub()
         elif "Smart Function Analysis" in choice:
             perform_function_analysis()
         elif "Cross-Reference Explorer" in choice:
             perform_xref_analysis()
-        elif "Intelligent Code Comments" in choice:
-            # This would integrate with the existing comment functionality
-            show_analysis_progress("Intelligent code commenting feature coming soon!")
-        elif "Visual Analysis Results" in choice:
-            show_analysis_progress("Visual analysis results feature coming soon!")
         elif "Enhanced Settings" in choice:
             setup_enhanced_api_keys()
-        elif "Usage Analytics" in choice:
-            show_usage_menu_stub()
         elif "Help" in choice:
             show_help_documentation()
         
