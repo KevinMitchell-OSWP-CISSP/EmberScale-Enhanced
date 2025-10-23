@@ -15,12 +15,13 @@ EmberScale is a comprehensive reverse engineering tool that integrates advanced 
 
 ## Key Features
 
-### Core Capabilities
+### Core Capabilities (Production-Ready)
 - **AI-Powered Analysis**: Advanced binary analysis using Claude AI models
 - **Agent Skills Integration**: Specialized reverse engineering workflows with document generation
 - **Enhanced Ghidra Integration**: Deep integration with Ghidra's scripting API
 - **Usage Monitoring**: Comprehensive cost tracking and usage analytics
-- **Custom Skills Support**: Create and integrate custom reverse engineering Skills
+- **Token Tracking**: Built-in usage tracking across all tools
+- **Error Handling**: Robust error handling and logging system
 
 ### Analysis Types
 - **Malware Analysis**: Advanced malware detection and analysis
@@ -41,26 +42,53 @@ EmberScale is a comprehensive reverse engineering tool that integrates advanced 
 ```
 EmberScale-Enhanced/
 ├── EmberScale_Ghidra.py              # Main Ghidra integration script
-├── EmberScale_QA_Lite.py             # Quick analysis tool
+├── EmberScale_QA_Lite.py             # Quick analysis tool  
 ├── EmberScale-RE_Toolbox.py          # Comprehensive analysis toolbox
-├── EmberScale_Enhanced.py            # Enhanced version with advanced UI
+├── EmberScale_Enhanced.py            # Enhanced version (production-ready)
 ├── EmberScale_Agent_Skills.py        # Agent Skills integration
 ├── EmberScale_Usage_Monitor.py       # Usage monitoring dashboard
+├── EmberScale_Single_Decompile.py    # Single function decompilation
 ├── decyx/                            # Core API modules
 │   ├── api.py                        # Anthropic API integration
-│   ├── admin_api.py                  # Admin API for usage monitoring
 │   ├── config.py                     # Configuration management
-│   ├── decompiler.py                 # Decompiler integration
+│   ├── logger.py                     # Enhanced logging system
+│   ├── decompiler.py                 # Decompilation utilities
 │   ├── gui.py                        # GUI components
 │   └── utils.py                      # Utility functions
-├── examples/                         # Example implementations
-│   ├── custom_re_skill/             # Custom reverse engineering Skill
-│   └── agent_skills_example.py      # Agent Skills usage examples
-├── README.md                         # This file
-├── USAGE_MONITORING_README.md        # Usage monitoring documentation
+├── examples/                         # Usage examples and tutorials
+│   ├── quick_start.py                # Quick start guide
+│   ├── agent_skills_example.py       # Agent Skills examples
+│   └── custom_re_skill/              # Custom skill examples
+├── assets/                           # Media and documentation
+├── INSTALLATION.md                   # Detailed installation guide
+├── CHANGELOG.md                      # Version history
+├── CONTRIBUTING.md                   # Contribution guidelines
+├── LICENSE                           # MIT License
+├── requirements.txt                  # Python dependencies
+└── README.md                         # This file
 ├── AGENT_SKILLS_README.md           # Agent Skills documentation
 └── ENHANCEMENT_SUMMARY.md           # Enhancement summary
 ```
+
+## Production-Ready Improvements (v2.0.0)
+
+### Enhanced Stability
+- **Removed Incomplete Features**: All stub functions and placeholder code removed
+- **Production-Ready Code**: Only fully implemented features included
+- **Robust Error Handling**: Comprehensive error handling across all tools
+- **Jython Compatibility**: Full compatibility with Ghidra's Jython environment
+
+### Code Quality Improvements
+- **Enhanced Logging**: Structured logging system with multiple levels
+- **Token Tracking**: Built-in usage tracking for all EmberScale tools
+- **Configuration Management**: Environment variables and flexible settings
+- **Character Encoding**: Fixed all emoji and special character rendering issues
+
+### Documentation & Examples
+- **Comprehensive Documentation**: Installation, usage, and contribution guides
+- **Quick Start Examples**: Interactive tutorials and examples
+- **Professional Structure**: Complete project structure with all necessary files
+- **Version History**: Detailed changelog and version tracking
 
 ## Installation & Setup
 
