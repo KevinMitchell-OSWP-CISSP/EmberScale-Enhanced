@@ -441,7 +441,7 @@ def integrate_with_existing_tools():
     # Example: Track when RE Toolbox is used  
     track_usage_for_operation("RE_Toolbox_Analysis")
     
-    print("✅ Usage monitoring integration complete")
+    print("Usage monitoring integration complete")
 
 def show_integration_status():
     """
@@ -456,8 +456,8 @@ def show_integration_status():
     admin_key = prefs.getProperty("ANTHROPIC_ADMIN_API_KEY")
     
     print("API Key Status:")
-    print("  • Regular API Key: {}".format("Found" if regular_key else "Missing"))
-    print("  • Admin API Key: {}".format("Found" if admin_key else "Missing"))
+    print("  - Regular API Key: {}".format("Found" if regular_key else "Missing"))
+    print("  - Admin API Key: {}".format("Found" if admin_key else "Missing"))
     print("")
     
     # Check local usage data
@@ -468,14 +468,14 @@ def show_integration_status():
     # Show available features
     print("Available Features:")
     if regular_key:
-        print("  • Basic EmberScale functionality")
+        print("  - Basic EmberScale functionality")
     if admin_key:
-        print("  • Comprehensive usage analytics")
-        print("  • Cost tracking and reporting")
-        print("  • API key management")
-        print("  • Usage trends and insights")
+        print("  - Comprehensive usage analytics")
+        print("  - Cost tracking and reporting")
+        print("  - API key management")
+        print("  - Usage trends and insights")
     else:
-        print("  • WARNING: Limited to basic functionality (Admin API key needed for full features)")
+        print("  - WARNING: Limited to basic functionality (Admin API key needed for full features)")
 
 if __name__ == "__main__":
     main()
